@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://updates.equipmentshare.com/, https://github.com/EquipmentShare/t3os-examples,
+  conventions/equipmentshare-conventions.yml
+# Lifecycle posture for the T3OS ERP API. A public dated release-notes feed exists; no dedicated
+# API status page, deprecation policy, or SLA document was found publicly (T3 SLAs are contractual).
+versioning:
+  scheme: path-prefixed service on api.equipmentshare.com (es-erp-api)
+  current: es-erp-api
+changelog:
+  url: https://updates.equipmentshare.com/
+  feed: https://updates.equipmentshare.com/feed
+  artifact: changelog/equipmentshare-changelog.yml
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No public deprecation/Sunset policy found.
+status_page:
+  url: null
+  note: No public status page (status.equipmentshare.com does not resolve).
+sla:
+  url: null
+  note: SLAs are contractual (T3 developer/integration access is granted per customer).
+deprecated_operations: []

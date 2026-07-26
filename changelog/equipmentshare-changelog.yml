@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://updates.equipmentshare.com/feed
+docs: https://updates.equipmentshare.com/
+# EquipmentShare & T3 publish a dated public release-notes feed (RSS available at /feed) covering
+# the T3 platform, T3 Analytics, and the Link mobile app. This is a product changelog rather than
+# a semver API changelog; entries are dated, tagged by product area, not versioned.
+scheme: dated-product-release-notes
+tags: [api, integrations, t3, analytics, link-mobile-app]
+entries:
+- date: '2026-07-15'
+  title: Improvements to Live Asset Location in Link Mobile App
+  area: link-mobile-app
+- date: '2026-07-15'
+  title: See Related Work Orders for an Asset in Link Mobile App
+  area: link-mobile-app
+- date: '2026-07-14'
+  title: Manage Rentals Faster with New Self-Service Tools and Utilization Insights in T3
+  area: t3
+- date: '2026-07-07'
+  title: Improved Visibility of Deleted Users in T3
+  area: t3
+- date: '2026-07-01'
+  title: New Fleet Safety Report for T3 Dash Cams
+  area: t3
+- date: '2026-07-01'
+  title: Monitor Asset Inspections with New Report in T3 Analytics
+  area: analytics
+- date: '2026-07-01'
+  title: Updated Task List Experience in the Link Mobile App
+  area: link-mobile-app
+- date: '2026-07-01'
+  title: New Combined Work Orders and Inspections View in Link Mobile App
+  area: link-mobile-app
+- date: '2026-07-01'
+  title: Support for Multi-Engine Equipment in T3
+  area: t3
+- date: '2026-06-10'
+  title: Add Assets Faster with AI-Powered Photo Analysis in T3
+  area: t3

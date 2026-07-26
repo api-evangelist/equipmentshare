@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of api.equipmentshare.com + T3OS Auth0 tenant
+# T3OS exposes its identity surface through an Auth0 tenant (equipmentshare-erp.us.auth0.com)
+# and publishes a JWKS document under the es-erp-api base path used to verify install-token JWTs.
+# The apex host (equipmentshare.com) and the API host root publish no /.well-known/ discovery docs.
+hosts:
+- host: https://api.equipmentshare.com
+  documents:
+  - path: /es-erp-api/.well-known/jwks.json      # RFC 7517 — install-token / JWT verification keys
+    status: 200
+    file: equipmentshare-jwks.json
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://equipmentshare-erp.us.auth0.com
+  documents:
+  - path: /.well-known/openid-configuration      # OIDC discovery — T3OS production Auth0 tenant
+    status: 200
+    file: equipmentshare-openid-configuration.json
+- host: https://equipmentshare.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

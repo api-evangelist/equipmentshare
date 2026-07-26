@@ -1,0 +1,55 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/EquipmentShare/t3os-examples
+# Cross-cutting request/response semantics for the T3OS ERP API (es-erp-api), captured from the
+# published reference apps and a live probe of the GraphQL endpoint.
+transport:
+  style: graphql
+  endpoint: https://api.equipmentshare.com/es-erp-api/graphql
+  method: POST
+  content_type: application/json
+  note: Single GraphQL endpoint; operations are GraphQL queries/mutations (e.g. getWorkspaceById), not REST paths.
+authentication:
+  styles:
+  - Bearer access token (user-delegated OAuth2 — Authorization: Bearer <token>)
+  - X-API-Key header (workspace-installed API key)
+  ref: authentication/equipmentshare-authentication.yml
+error_envelope:
+  style: graphql
+  shape: '{ "data": null, "errors": [ { "message": "..." } ] }'
+  evidence: 'live GET returned {"data":null,"errors":[{"message":"Unknown query"}]}'
+  note: >-
+    Errors surface in the standard GraphQL top-level `errors[]` array; there is no published
+    RFC 9457 problem+json envelope for this API.
+versioning:
+  scheme: path-prefixed service (es-erp-api) on api.equipmentshare.com
+  current: es-erp-api
+  environments:
+    production:
+      graphql: https://api.equipmentshare.com/es-erp-api/graphql
+      auth0_tenant: equipmentshare-erp.us.auth0.com
+      audience: https://api.equipmentshare.com/es-erp-api/delegated
+    staging:
+      graphql: https://staging-api.equipmentshare.com/es-erp-api/graphql
+      auth0_tenant: staging-equipmentshare-erp.us.auth0.com
+      audience: https://staging-api.equipmentshare.com/es-erp-api/delegated
+idempotency:
+  supported: unknown
+  note: No idempotency-key contract is documented in the public reference apps.
+pagination:
+  style: unknown
+  note: Not documented in the public reference material (GraphQL schema is not public).
+events:
+  status: referenced-not-cataloged
+  note: >-
+    The workspace-installed reference app notes that real workspace integrations "subscribe to
+    T3OS workspace events" including uninstall events; no public event/webhook catalog or schema
+    is published, so no Webhooks/AsyncAPI artifact is asserted (no fabrication).
+rate_limits:
+  status: unknown
+  note: Not documented publicly.
+cross_links:
+  authentication: authentication/equipmentshare-authentication.yml
+  scopes: scopes/equipmentshare-scopes.yml
+  lifecycle: lifecycle/equipmentshare-lifecycle.yml
+  well_known: well-known/equipmentshare-well-known.yml
