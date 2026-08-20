@@ -42,6 +42,15 @@ tags:
 - Equipment Rental
 - GraphQL
 - Developer Platform
+- Authentication
+tags_raw:
+- Company
+- Construction Technology
+- Fleet Management
+- Telematics
+- Equipment Rental
+- GraphQL
+- Developer Platform
 - OAuth
 apis:
 - name: T3OS ERP GraphQL API
