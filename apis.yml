@@ -10,6 +10,17 @@ description: >-
   (X-API-Key), and sign-in-only OpenID Connect. T3 also offers an Outbound Developer API for
   structured fleet-data access (XML/JSON) and aggregates AEMP-compliant OEM telematics. Access
   is granted through the T3OS developer portal (app.t3os.ai) and app registration.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
