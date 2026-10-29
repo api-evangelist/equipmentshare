@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-EquipmentShare is a company surfaced as a portfolio company of insight-partners, y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+EquipmentShare is a construction technology and equipment-solutions company (founded 2015, headquartered in Columbia, Missouri) whose proprietary platform, T3, unifies telematics, rental and fleet operations across one of the largest mixed fleets in the US — 349,000+ connected assets across 380+ locations. Its developer surface, T3OS, exposes a GraphQL ERP API (es-erp-api) at api.equipmentshare.com with three first-party auth flows backed by Auth0: user-delegated OAuth 2.0 (Authorization Code + PKCE), workspace-installed API keys (X-API-Key), and sign-in-only OpenID Connect. T3 also offers an Outbound Developer API for structured fleet-data access (XML/JSON) and aggregates AEMP-compliant OEM telematics. Access is granted through the T3OS developer portal (app.t3os.ai) and app registration.
 
-Backed by: insight-partners, y-combinator — https://equipmentshare.com/
+**Areas:** Company · Construction Technology · Fleet Management · Telematics · Equipment Rental · GraphQL · Developer Platform · Authentication
+
+## EquipmentShare on APIs.io
+
+Everything profiled for EquipmentShare is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/equipmentshare/](https://apis.io/providers/equipmentshare/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [T3OS ERP GraphQL API](https://apis.io/apis/equipmentshare/t3os-erp-graphql-api/) — The T3OS developer platform's GraphQL ERP API (es-erp-api). A single GraphQL endpoint served over authenticated Bearer (user-delegated OAuth2) or X-API-Key…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Equipmentshare Authentication](https://apis.io/security/equipmentshare/equipmentshare-authentication/)
+- [Equipmentshare Domain Security](https://apis.io/security/equipmentshare/equipmentshare-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Equipmentshare Scopes](https://apis.io/scopes/equipmentshare/equipmentshare-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://equipmentshare.com/)
+- [Documentation](https://github.com/EquipmentShare/t3os-examples)
+- [Support](https://www.equipmentshare.com/contact)
+- [Changelog](https://updates.equipmentshare.com/)
+- [Blog](https://equipmentshare.com/resources)
+- [Terms of service](https://www.equipmentshare.com/terms)
+- [Privacy policy](https://www.equipmentshare.com/privacy-policy)
+- [GitHub](https://github.com/EquipmentShare)
+
+## API Evangelist rating
+
+**Kin Score 25.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 39.9 |
+| Access clarity | 34.2 |
+
+**Agent readiness 16.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/equipmentshare/](https://apis.io/providers/equipmentshare/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for EquipmentShare: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/equipmentshare/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
